@@ -1,0 +1,16 @@
+{
+  "name": "personal-expenses-api",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "natalia",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/app.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

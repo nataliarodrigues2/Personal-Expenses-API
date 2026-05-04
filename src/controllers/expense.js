@@ -1,28 +1,28 @@
-const expenseModel = require('../models/expense.js')
+const expenseModel = require("../models/expense.js");
+
+const expense = new expenseModel();
 
 class ExpenseController {
-    constructor() {
-
-    }
+    constructor() { }
 
     getAll() {
-        return expenseModel.getAll();
+        return expense.getAll();
     }
 
     getById(id) {
-        return expenseModel.getById(id);
+        return expense.getById(id);
     }
 
     create(title, amount, category, date, description) {
-        return expenseModel.create(title, amount, category, date, description);
+        return expense.create(title, amount, category, date, description);
     }
 
     update(id, title, amount, category, date, description) {
-        return expenseModel.update(id, title, amount, category, date, description);
+        return expense.update(id, title, amount, category, date, description);
     }
 
     delete(id) {
-        return expenseModel.delete(id);
+        return expense.delete(id);
     }
 }
 

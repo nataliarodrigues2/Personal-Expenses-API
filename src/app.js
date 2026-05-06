@@ -1,16 +1,17 @@
 const express = require("express");
-const expenseView = require("./views/expense.js");
+const expenseView = require("./views/expense.js"); // traz a view de despesa para o app.js
 
 const app = express();
 const expenses = new expenseView();
 
 app.use(express.json());
 
-app.get("/expenses", expenses.getAll);
-app.get("/expense/:id", expenses.getById);
-app.post("/expense", expenses.create);
-app.put("/expense/:id", expenses.update);
-app.delete("/expense/:id", expenses.delete);
+// rotas existentes
+app.get("/api/expenses", expenses.getAll); 
+app.get("/api/expenses/:id", expenses.getById);
+app.post("/api/expenses", expenses.create);
+app.put("/api/expenses/:id", expenses.update);
+app.delete("/api/expenses/:id", expenses.delete);
 
 app.listen(3000, () => {
   console.log(`Servidor rodando na porta: http://localhost:${3000}`);

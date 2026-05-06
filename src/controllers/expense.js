@@ -1,8 +1,7 @@
-const expenseModel = require("../models/expense.js");
-
+const expenseModel = require("../models/expense.js"); // pega o modelo de despesa
 const expense = new expenseModel();
 
-class ExpenseController {
+class ExpenseController { // cria a classe de controle de despesa
     constructor() { }
 
     getAll() {
@@ -14,6 +13,7 @@ class ExpenseController {
     }
 
     create(title, amount, category, date, description) {
+        
         return expense.create(title, amount, category, date, description);
     }
 
@@ -23,6 +23,10 @@ class ExpenseController {
 
     delete(id) {
         return expense.delete(id);
+    }
+
+    existsExpense(id) {
+        return expense.existsExpense(id);
     }
 }
 

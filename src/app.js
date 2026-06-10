@@ -7,7 +7,7 @@ const expenses = new expenseView();
 app.use(express.json());
 
 // rotas existentes
-app.get("/api/expenses", expenses.getAll); 
+app.get("/api/expenses", expenses.getAll);
 app.get("/api/expenses/:id", expenses.getById);
 app.post("/api/expenses", expenses.create);
 app.put("/api/expenses/:id", expenses.update);
